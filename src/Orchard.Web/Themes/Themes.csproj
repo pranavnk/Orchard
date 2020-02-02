@@ -57,6 +57,7 @@
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -87,9 +88,83 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contoso\Code\ContentShapeProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contoso\Content\Images\bkg.jpg" />
+    <Content Include="Contoso\Content\Images\comment-arrow.png" />
+    <Content Include="Contoso\Content\Images\content-bkg.png" />
+    <Content Include="Contoso\Content\Images\content-bottom.png" />
+    <Content Include="Contoso\Content\Images\content-top.png" />
+    <Content Include="Contoso\Content\Images\feature-bkg-bottom.png" />
+    <Content Include="Contoso\Content\Images\feature-bkg-top.png" />
+    <Content Include="Contoso\Content\Images\feature-bkg.png" />
+    <Content Include="Contoso\Content\Images\Gallery\feature01.jpg" />
+    <Content Include="Contoso\Content\Images\Gallery\feature02.jpg" />
+    <Content Include="Contoso\Content\Images\Gallery\feature03.jpg" />
+    <Content Include="Contoso\Content\Images\Gallery\feature04.jpg" />
+    <Content Include="Contoso\Content\Images\icon-location.png" />
+    <Content Include="Contoso\Content\Images\menu-divider.png" />
+    <Content Include="Contoso\Content\Images\menu-hover-left.png" />
+    <Content Include="Contoso\Content\Images\menu-hover.png" />
+    <Content Include="Contoso\Content\Images\menu-left.png" />
+    <Content Include="Contoso\Content\Images\menu-right.png" />
+    <Content Include="Contoso\Content\Images\nav-arrow-left.png" />
+    <Content Include="Contoso\Content\Images\nav-arrow-right.png" />
+    <Content Include="Contoso\Content\Images\sub-header.png" />
+    <Content Include="Contoso\Contoso.csproj" />
+    <Content Include="Contoso\Instructions.txt" />
+    <Content Include="Contoso\Scripts\easySlider.js" />
+    <Content Include="Contoso\Styles\Site.css" />
+    <Content Include="Contoso\Theme.png" />
+    <Content Include="Contoso\Theme.txt" />
+    <Content Include="Dark\Content\Images\banner.demo.jpg" />
+    <Content Include="Dark\Content\Images\breadcrumb.bg.png" />
+    <Content Include="Dark\Content\Images\breadcrumb.home.png" />
+    <Content Include="Dark\Content\Images\breadcrumb.sep.png" />
+    <Content Include="Dark\Content\Images\contentimage.demo.jpg" />
+    <Content Include="Dark\Content\Images\DarkHeader.jpg" />
+    <Content Include="Dark\Content\Images\Flags\en-US.gif" />
+    <Content Include="Dark\Content\Images\Flags\pt-PT.gif" />
+    <Content Include="Dark\Content\Images\footer.bg.png" />
+    <Content Include="Dark\Content\Images\footer.L.png" />
+    <Content Include="Dark\Content\Images\footer.M.png" />
+    <Content Include="Dark\Content\Images\footer.R.png" />
+    <Content Include="Dark\Content\Images\footerimage.demo.png" />
+    <Content Include="Dark\Content\Images\header.shadow.png" />
+    <Content Include="Dark\Content\Images\inputbtn.png" />
+    <Content Include="Dark\Content\Images\logo.png" />
+    <Content Include="Dark\Content\Images\menu.arrow.png" />
+    <Content Include="Dark\Content\Images\menu.bg.png" />
+    <Content Include="Dark\Content\Images\menuV.TL.png" />
+    <Content Include="Dark\Content\Images\menuV.TR.png" />
+    <Content Include="Dark\Content\Images\menuVitem.png" />
+    <Content Include="Dark\Content\Images\page.bg.dots.png" />
+    <Content Include="Dark\Content\Images\page.bg.lights.png" />
+    <Content Include="Dark\Content\Images\search.bg.png" />
+    <Content Include="Dark\Content\Images\submenu.arrow.png" />
+    <Content Include="Dark\Content\Images\topbanner.BL.png" />
+    <Content Include="Dark\Content\Images\topbanner.BM.png" />
+    <Content Include="Dark\Content\Images\topbanner.BR.png" />
+    <Content Include="Dark\Content\Images\topbanner.ML.png" />
+    <Content Include="Dark\Content\Images\topbanner.MR.png" />
+    <Content Include="Dark\Content\Images\topbanner.TL.png" />
+    <Content Include="Dark\Content\Images\topbanner.TM.png" />
+    <Content Include="Dark\Content\Images\topbanner.TR.png" />
+    <Content Include="Dark\Instructions.txt" />
+    <Content Include="Dark\Scripts\html5.js" />
+    <Content Include="Dark\Styles\C01.BR.png" />
+    <Content Include="Dark\Styles\C01.TL.png" />
+    <Content Include="Dark\Styles\C01.TM.png" />
+    <Content Include="Dark\Styles\site.css" />
+    <Content Include="Dark\Theme.png" />
+    <Content Include="Dark\Theme.txt" />
+    <Content Include="html5cleantheme\html5cleantheme.csproj" />
+    <Content Include="html5cleantheme\Styles\Site.css" />
+    <Content Include="html5cleantheme\Theme.png" />
+    <Content Include="html5cleantheme\Theme.txt" />
+    <Content Include="html5cleantheme\ThemeZonePreview.png" />
     <Content Include="TheAdmin\Scripts\admin.js" />
     <Content Include="TheAdmin\Styles\ie.css" />
     <Content Include="TheAdmin\Styles\ie7.css" />
@@ -189,6 +264,10 @@
       <Name>Orchard.Framework</Name>
       <Private>$(MvcBuildViews)</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\Orchard.Autoroute\Orchard.Autoroute.csproj">
+      <Project>{66fccd76-2761-47e3-8d11-b45d0001ddaa}</Project>
+      <Name>Orchard.Autoroute</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\Orchard.Layouts\Orchard.Layouts.csproj">
       <Project>{6bd8b2fa-f2e3-4ac8-a4c3-2925a653889a}</Project>
       <Name>Orchard.Layouts</Name>
@@ -206,6 +285,45 @@
     <Content Include="TheAdmin\Views\AdminCultureSelector.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dark\Content\Web.config" />
+    <Content Include="Dark\Styles\Web.config" />
+    <Content Include="Dark\Views\Content.cshtml" />
+    <Content Include="Dark\Views\Document.cshtml" />
+    <Content Include="Dark\Views\DocumentNoSearch.cshtml" />
+    <Content Include="Dark\Views\Layout.cshtml" />
+    <Content Include="Dark\Views\Q1.cshtml" />
+    <Content Include="Dark\Views\Q2.cshtml" />
+    <Content Include="Dark\Views\Q3.cshtml" />
+    <Content Include="Dark\Views\Q4.cshtml" />
+    <Content Include="Dark\Views\T1.cshtml" />
+    <Content Include="Dark\Views\T2.cshtml" />
+    <Content Include="Dark\Views\T3.cshtml" />
+    <Content Include="Dark\Views\Top.cshtml" />
+    <Content Include="Dark\Views\Widget.Wrapper.cshtml" />
+    <Content Include="Contoso\Content\Web.config" />
+    <Content Include="Contoso\Placement.info" />
+    <Content Include="Contoso\Scripts\Web.config" />
+    <Content Include="Contoso\Styles\Web.config" />
+    <Content Include="Contoso\Views\BadgeOfHonor.cshtml" />
+    <Content Include="Contoso\Views\Branding.cshtml" />
+    <Content Include="Contoso\Views\Content-HomePage.cshtml" />
+    <Content Include="Contoso\Views\Content.cshtml" />
+    <Content Include="Contoso\Views\Layout.cshtml" />
+    <Content Include="Contoso\Views\Web.config" />
+    <Content Include="html5cleantheme\Content\Web.config" />
+    <Content Include="html5cleantheme\Placement.info" />
+    <Content Include="html5cleantheme\Scripts\Web.config" />
+    <Content Include="html5cleantheme\Styles\Web.config" />
+    <Content Include="html5cleantheme\Views\Content.cshtml" />
+    <Content Include="html5cleantheme\Views\Content.Summary.cshtml" />
+    <Content Include="html5cleantheme\Views\Document.cshtml" />
+    <Content Include="html5cleantheme\Views\Layout.cshtml" />
+    <Content Include="html5cleantheme\Views\MenuItem.cshtml" />
+    <Content Include="html5cleantheme\Views\Web.config" />
+    <Content Include="html5cleantheme\Web.config" />
+    <Content Include="Dark\Scripts\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
